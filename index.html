@@ -1,0 +1,86 @@
+<!DOCTYPE html>  
+<html lang="fa">  
+
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>رنگ‌آمیزی گراف حرکتی</title>  
+    <script src="https://d3js.org/d3.v7.min.js"></script>  
+    <link rel="stylesheet" href="style.css">  
+    <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazir-font@v30.1.0/dist/font-face.css" rel="stylesheet" type="text/css" />
+
+</head>  
+
+<body>  
+    <h1> رنگ‌آمیزی گراف با الگوریتم IDS</h1> 
+    <h5>تهیه شده توسط محمد جواد نوروزی شاد</h5> 
+    <div style="display: flex; justify-content: space-between; margin: 0 20px;">
+        <button id="darkMode" class="button">  حالت شب</button>  
+    <button id="infoBtn" class="button">توضیحات الگوریتم</button>  
+    </div>
+    <div class="form-container">
+        <label for="fileInput">بارگذاری ماتریس مجاورت (txt):</label>
+        <input type="file" id="fileInput" accept=".txt" title="لطفاً یک فایل با فرمت txt برای ماتریس مجاورت انتخاب کنید">
+        <button class="button" id="startBtn">شروع رنگ‌آمیزی</button>
+        <button class="button" id="outBtn">پاک کردن گراف</button> 
+    </div>
+    
+    
+        <div style="
+        display: flex; 
+        flex-direction: row-reverse; 
+        align-items: flex-start; 
+        justify-content: space-around; 
+        gap: 20px; 
+        flex-wrap: wrap;
+        padding: 20px;
+    ">
+        <!-- گراف -->
+        <svg  disabled="true" id="graph" width="600" height="400" style="margin:0; border: 1px solid #ccc; background: #fff;">
+            <text x="50%" y="50%" text-anchor="middle" dominant-baseline="middle" fill="#aaa" font-size="20px"  >
+                محل رسم گراف
+            </text>
+        </svg>
+    
+        <!-- نتیجه -->
+        <div id="result" style="
+            flex: 1;
+            max-width: 300px;
+            padding: 15px;
+            background: #f9f9f9;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            line-height: 1.6;
+            color: #333;
+        ">
+            <h3 style="text-align: center; color: #4caf50;">نتایج رنگ‌آمیزی</h3>
+            <p>لطفاً ابتدا گراف را رنگ‌آمیزی کنید.</p>
+        </div>
+    </div>
+    
+
+    <!-- مدال توضیحات -->  
+    <div id="myModal" class="modal" >  
+        <div class="modal-content" dir="rtl" id="modalContent">  
+            <span  class="close lkl">&times;</span>  
+            <h4>شرح الگوریتم رنگ‌آمیزی (IDS)</h4>  
+            <p>  
+                الگوریتم **IDS** یک روش برای رنگ‌آمیزی گراف است که از جستجوی عمقی استفاده می‌کند.  
+                این الگوریتم رئوس را با رنگ‌هایی مشخص می‌کند به‌طوری‌که هیچ دو رأس مجاور رنگ مشابهی نداشته باشند.  
+            </p>  
+            <ul>  
+                <li>رأس اول انتخاب شده و رنگ می‌گیرد.</li>  
+                <li>رئوس بعدی با رنگ‌های متفاوت بررسی می‌شوند.</li>  
+                <li>در صورت تضاد، به مرحله قبل بازگشته و رنگ تغییر می‌کند.</li>  
+                <li>تا زمانی که تمامی رئوس رنگ‌آمیزی شوند، الگوریتم ادامه می‌یابد.</li>  
+            </ul>  
+            <div class="modal-footer">  
+                <button id="closeButton" class="button">بستن</button>  
+            </div>  
+        </div>  
+    </div>  
+
+    <script type="module" src="./main.js"></script> 
+</body>  
+
+</html>

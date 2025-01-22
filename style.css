@@ -1,0 +1,195 @@
+body {
+    font-family: "Vazir", Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.3s, color 0.3s;
+    direction: rtl;
+}
+#outBtn{
+    display: none;
+}
+body.dark-mode {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+h1 {
+    text-align: center;
+    font-size: 24px;
+    margin: 20px 0;
+    color: #2c3e50;
+}
+h5 {
+    text-align: center;
+    color: #2c3e50;
+}
+.button {
+    display: inline-block;
+    padding: 12px 25px;
+    margin: 15px;
+    font-family: "Vazir", Arial, sans-serif;
+    background: linear-gradient(to right, #6a11cb, #2575fc);
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 14px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-align: center;
+}
+
+.button:hover {
+    transform: scale(1.08);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+.button:focus {
+    outline: none;
+}
+
+svg {
+    border: 1px solid #ddd;
+    margin: 20px auto;
+    display: block;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.node {
+    cursor: pointer;
+    fill-opacity: 0.9;
+    stroke: #fff;
+    stroke-width: 1.5px;
+    transition: transform 0.3s ease;
+}
+
+.node:hover {
+    transform: scale(1.1);
+}
+
+.link {
+    fill: none;
+    stroke: #999;
+    stroke-opacity: 0.6;
+    stroke-width: 2px;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    padding-top: 150px;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: auto;
+    padding: 30px;
+    border-radius: 15px;
+    width: 80%;
+    max-width: 500px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 0.4s ease-out;
+    position: relative;
+}
+
+.modal-content.dark-mode {
+    background-color: #1e1e1e;
+    color: #e0e0e0;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    font-size: 24px;
+    color: #999;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.close:hover {
+    color: #e74c3c;
+}
+
+.dark-mode .button {
+    background: linear-gradient(to right, #1abc9c, #16a085);
+}
+
+.dark-mode .button:hover {
+    background: linear-gradient(to right, #16a085, #1abc9c);
+}
+
+.dark-mode svg {
+    background: #1e1e1e;
+    border-color: #333;
+}
+
+#fileInput {
+    font-size: 14px;
+    color: #333;
+    padding: 10px;
+    margin-top: 10px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    width: 100%;
+    max-width: 300px;
+    cursor: pointer;
+}
+
+#fileInput:hover {
+    border-color: #6a11cb;
+    background-color: #f1f1f1;
+}
+
+.button-start {
+    padding: 15px 10px;
+    margin: 10px 0;
+    background: linear-gradient(to right, #6a11cb, #2575fc);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.button-start:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.form-container {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+}
+
+ 
+ 
